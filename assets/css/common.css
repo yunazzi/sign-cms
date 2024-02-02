@@ -1,38 +1,5 @@
-.blind{
-    width: 1px; height: 1px;
-    clip: rect(0,0,0,0);
-    position: absolute;
-    margin: -1px;
-    overflow: hidden;
-}
+.blind{ position: absolute; width: 1px; height: 1px; clip: rect(0,0,0,0); margin: -1px; overflow: hidden; }
 
 /* 마우스 커서 */
-.big-circle{
-    position: fixed;
-    top: 0; left: 0;
-    width: 48px; height: 48px;
-    z-index: 20;
-    pointer-events: none;/* 선택되지않고 껍데기만 있음 */
-    margin-left: -24px;
-    margin-top: -24px;
-
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: 50%;
-    backdrop-filter: invert();
-    will-change: transfrom;
-}
-.small-circle{
-    position: fixed;
-    top: 0; left: 0;
-    width: 15px; height: 15px;
-    z-index: 20;
-    pointer-events: none;/* 선택되지않고 껍데기만 있음 */
-    margin-left: -7.5px;
-    margin-top: -7.5px;
-
-    backdrop-filter: invert();
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0);
-    border-radius: 50%;
-    will-change: transfrom;/* 제빨리 대응할수있게 해줌 */
-}
+.big-circle{ position: fixed; top: 0; left: 0; width: 48px; height: 48px; z-index: 20; pointer-events: none;/* 선택되지않고 껍데기만 있음 */ margin-left: -24px; margin-top: -24px; background-color: rgba(0, 0, 0, 0); border-radius: 50%; backdrop-filter: invert(); will-change: transfrom; }
+.small-circle{ position: fixed; top: 0; left: 0; width: 15px; height: 15px; z-index: 20; pointer-events: none;/* 선택되지않고 껍데기만 있음 */ margin-left: -7.5px; margin-top: -7.5px; backdrop-filter: invert(); color: #fff; background-color: rgba(255, 255, 255, 0); border-radius: 50%; will-change: transfrom;/* 제빨리 대응할수있게 해줌 */ }

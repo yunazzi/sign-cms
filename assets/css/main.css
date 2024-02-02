@@ -79,9 +79,6 @@
 .sc-portfolio .group-images img{ width: 400px; height: 500px; object-fit: cover; will-change: transform; }
 
 .sc-portfolio .group-nav{ display: flex; flex-direction: column; justify-content: center; align-items: center; padding-right: 35px; position: sticky; top: 0; height: 100vh; gap: 19px; font-size: 1vw; font-family: 'Italiana', sans-serif; }
-.sc-portfolio .group-images{
-
-}
 .sc-portfolio .group-nav a.on{color: #d3b203;}
 
 
@@ -112,38 +109,13 @@
 .sc-meet .contact-wrap{ display: flex; }
 .sc-meet .card-item .img-area img{ border-radius: 5px; }
 .sc-meet .card-item .intro-area{ text-align: left; }
-.sc-meet .card-item .intro-area{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    opacity: 0;
-    transition: .3s;
-    will-change: transform,opacity;
-}
-.sc-meet .card-item .intro-area p{
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.4;
-}
-.sc-meet .card-item .intro-area span{
-    text-transform: capitalize;
-    font-size: 0.9rem;
-    font-weight: 300;
-}
-.sc-meet [dir="rtl"] .card-item .sns-wrap{
-    justify-content: flex-end;
-}
-.sc-meet .card-item .sns-wrap{
-    display: flex;
-    gap: 20px;
-}
-.sc-meet .card-item .sns-wrap svg{
-    width: 30px; height: 30px;
-}
-.sc-meet .card-item .sns-wrap svg path{
-    fill: #fff;
-}
+.sc-meet .card-item .intro-area{ display: flex; flex-direction: column; margin-top: 30px; gap: 20px; opacity: 0; transition: .3s; will-change: transform,opacity; }
+.sc-meet .card-item .intro-area p{ font-size: 1rem; font-weight: 700; line-height: 1.4; }
+.sc-meet .card-item .intro-area span{ text-transform: capitalize; font-size: 0.9rem; font-weight: 300; }
+.sc-meet [dir="rtl"] .card-item .sns-wrap{ justify-content: flex-end; }
+.sc-meet .card-item .sns-wrap{ display: flex; gap: 20px; }
+.sc-meet .card-item .sns-wrap svg{ width: 30px; height: 30px; }
+.sc-meet .card-item .sns-wrap svg path{ fill: #fff; }
 
 
 /* sc-list */
@@ -153,13 +125,6 @@
 .sc-list .list-item .title{ font-size: 6vw; font-weight: 400; line-height: 1.1; color: #fff; font-family: "Italiana", sans-serif; }
 .point.small.margin-top{ margin-top: 47px; margin-left: -28px; padding-left: 0; }
 .point.small{ width: 20px; height: 20px; color: #d3b203; margin-right: 10px; }
-.row.align-top{
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding-right: 31px; */
-}
 
 
 /* sc-partner */
@@ -175,12 +140,7 @@
 
 /* sc-social */
 .sc-social{position: relative; height: 200vh;}
-.sc-social .sticky{
-    position: sticky; top:0;
-    display: flex;
-    align-items: center; justify-content: center; flex-direction: column;
-    overflow: hidden;
-}
+.sc-social .sticky{ position: sticky; top:0; display: flex; align-items: center; justify-content: center; flex-direction: column; overflow: hidden; }
 .sc-social .area1{display: flex; height: 100vh; flex-direction: column; align-items: center; justify-content: center; transition: .3s; overflow: hidden;}
 .sc-social .area1 .group-social{font-size: 7vw; line-height: 0.9; text-transform: uppercase; overflow: hidden; margin-top: 40px; gap: 25px; will-change: transform; mix-blend-mode: overlay;}
 .sc-social .area1 .move-left{display: flex;}
@@ -191,130 +151,27 @@
 
 
 /* sc-contact */
-.sc-contact{
-    position: relative;
-    height: 400vh;
-    /* overflow: hidden; */
+.sc-contact{ position: relative; height: 400vh; }
+.sc-contact .sticky{ position: sticky; top:0; height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; width: 100%; overflow: hidden; }
+.sc-contact .contact-wrap{ font-size: 18vw; font-weight: 400; line-height: 0.9; z-index: 1; font-family: "Italiana", sans-serif; text-transform: uppercase; }
+.sc-contact .contact-img{ position: absolute; top: auto; bottom: auto; left: auto; right: auto; object-fit: cover; z-index: -1; }
+.sc-contact .contact-img{ width: 201px; height: 268px; }
+.sc-contact .filter{ position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0); }
+.sc-contact .form{ display: flex; flex-direction: column; align-items: center; justify-content: center; position: absolute; top: 0; bottom: 0; left: 0; right: 0; padding: 15vh 24vw; margin-top: 9vh; }
+.sc-contact .form form{ width: 100%; }
+.sc-contact .common-input{ display: block; background-color: rgba(0, 0, 0, 0); border: 1px #000; border-bottom: 1px solid #383838; font-size: 7vh; width: 100%; color: #333; margin-bottom: 10px; padding: 8px 12px; line-height: 1.4; }
+.sc-contact .common-input:focus{ outline: none; border-bottom: 1px solid #d3b203; color: #fff; }
+.sc-contact .row{ display: flex; align-items: center; justify-content: space-between; width: 100%; font-size: 0.8rem; }
+.sc-contact .row .common-checkbox{ display: flex; align-items: center; gap: 10px; }
+.sc-contact .row .comm-chk{ display: inline-block; width: 12px; height: 12px; border: 1px solid #ccc; border-radius: 2px; cursor: pointer; }
+.sc-contact input[type="checkbox"]:checked+label{ background-color: #d3b203; background-image: url(https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg); background-position: 50%; background-repeat: no-repeat; background-size: cover; border-color: #3898ec; }
+.sc-contact input[type="checkbox"]{ display: none; }
+.sc-contact .row span{ font-weight: 500; }
 
-}
-.sc-contact .sticky{
-    position: sticky; top:0; height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center; justify-content: center; flex-direction: column;
-    overflow: hidden;
-}
-.sc-contact .contact-wrap{
-    font-size: 18vw;
-    font-weight: 400;
-    line-height: 0.9;
-    z-index: 1;
-    font-family: "Italiana", sans-serif;
-    text-transform: uppercase;
-}
-.sc-contact .contact-img{
-    position: absolute;
-    top: auto; bottom: auto; left: auto; right: auto;
-    object-fit: cover;
-    z-index: -1;
-}
-.sc-contact .contact-img{
-    width: 201px; height: 268px;
-}
-.sc-contact .filter{
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    background-color: rgba(0, 0, 0, 0);
-}
-.sc-contact .form{
-    display: flex;
-    flex-direction: column;
-    align-items: center; justify-content: center;
-    position: absolute;
-    top: 0; bottom: 0; left: 0; right: 0;
-    padding: 15vh 24vw;
-    margin-top: 9vh;
-}
-.sc-contact .form form{
-    width: 100%;
-}
-.sc-contact .common-input{
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px #000;
-    border-bottom: 1px solid #383838;
-    font-size: 7vh;
-    width: 100%;
-    color: #333;
-    margin-bottom: 10px;
-    padding: 8px 12px;
-    line-height: 1.4;
-    display: block;
-}
-.sc-contact .common-input:focus{
-    outline: none;
-    border-bottom: 1px solid #d3b203;
-    color: #fff;
-}
-.sc-contact .row{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    font-size: 0.8rem;
-}
-.sc-contact .row .common-checkbox{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.sc-contact .row .comm-chk{
-    width: 12px; height: 12px;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    cursor: pointer;
-    display: inline-block;
-}
-input[type="checkbox"]:checked+label{
-    background-color: #d3b203;
-    background-image: url(https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg);
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-color: #3898ec;
-}
-input[type="checkbox"]{
-    display: none;
-}
-.sc-contact .row span{
-    font-weight: 500;
-}
-
-
-
-.sc-contact .submit-button{
-    width: 100px; height: 100px;
-    margin-top: 40px;
-    display: flex;
-    position: relative;
-    z-index: 99;
-}
-.sc-contact .submit-button button{
-    z-index: 99;
-    font-size: 2vw; color: #d3b203;
-    outline: none;
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    transition: padding .4s;
-}
-.sc-contact .submit-button button:hover{
-    padding-left: 29px;
-}
-.sc-contact .submit-button img{
-    width: 100px; height: 100px;
-    animation: rotate-img 30s linear infinite;
-    position: absolute;
-}
-
+.sc-contact .submit-button{ display: flex; position: relative; width: 100px; height: 100px; margin-top: 40px; z-index: 99; }
+.sc-contact .submit-button button{ position: absolute; top: 0; right: 0; bottom: 0; left: 0; transition: padding .4s; z-index: 99; font-size: 2vw; color: #d3b203; outline: none; }
+.sc-contact .submit-button button:hover{ padding-left: 29px; }
+.sc-contact .submit-button img{ position: absolute; width: 100px; height: 100px; animation: rotate-img 30s linear infinite; }
 
 .sc-contact .copyright{ display: flex; justify-content: center; align-items: center; padding: 0 10vw; color: #a3a3a3; position: absolute; bottom: 2vw; width: 100%; }
 .sc-contact .copyright small .deco-line{ text-decoration: underline; color: #d3b203; }
@@ -322,4 +179,3 @@ input[type="checkbox"]{
 .sc-contact .copyright .copyright-logo{ display: flex; align-items: center; color: rgba(0, 0, 0, .94); background-color: #3c4043; border-radius: 4px; transition: opacity .4s; padding: 3px 8px 3px 3px; }
 .sc-contact .copyright .copyright-logo img{ width: 25px; margin-top: -1px; }
 .sc-contact .copyright .copyright-logo .text{ color: #fff; text-transform: uppercase; font-size: 0.7rem; font-weight: 500; }
-/* .sc-contact .copyright .img{height: 0;} */
