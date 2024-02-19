@@ -2,7 +2,6 @@
 $('.btn-nav').click(function(){
     $(this).toggleClass('active')
     let on = $('.menu')
-    // $('.menu').addClass('on')
 
     if (on.hasClass('on')) {
         on.removeClass('on')
@@ -18,11 +17,6 @@ $('.menu .nav').hover(
         $(this).stop().animate({"marginLeft":"-6vw"},500)
 })
     
-    
-    // gsap.set('.sc-visual .area1 .headline',{opacity:0})
-    //기본수치를 미리세팅
-    
-
     const visualTl = gsap.timeline({}) //타임라인->시간 순서대로 작동
 
     //마우스 커서
@@ -113,28 +107,11 @@ $('.menu .nav').hover(
     gridTl.to('.sc-intro .area2 .grid-wrap .btn-link', {opacity:1},'b+1')
 
 
-    
-    // $('.sc-work p').each(function(i,el){
-
-    //     gsap.to($(this),{
-    //         scrollTrigger:{
-    //             trigger:$(this),
-    //             start:'0% 100%',
-    //             end:'0% 0%',
-    //             markers:true,
-    //         },
-    //         opacity:1,
-    //     })
-    // })
-    // ->
-    
-    // gsap.set('.sc-work p',{yPercent:100}) -> css처럼 미리 세팅을 해주고 css를 안써도됨
     ScrollTrigger.batch(".sc-work p", {
         start: "0 80%",
 
         onEnter: batch => {//도달했을때 개개인을 나오게 하기
           gsap.to(batch, {
-            // opacity: 1,
             yPercent:-100,
           });
         },
