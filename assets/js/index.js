@@ -1,4 +1,5 @@
 
+//햄버거바 메뉴
 $('.btn-nav').click(function(){
     $(this).toggleClass('active')
     let on = $('.menu')
