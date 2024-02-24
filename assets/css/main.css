@@ -78,7 +78,7 @@
 .sc-portfolio .group-images a{ display: flex; align-items: center; justify-content: center; height: 100vh; }
 .sc-portfolio .group-images img{ width: 400px; height: 500px; object-fit: cover; will-change: transform; }
 
-.sc-portfolio .group-nav{ display: flex; flex-direction: column; justify-content: center; align-items: center; padding-right: 35px; position: sticky; top: 0; height: 100vh; gap: 19px; font-size: 1vw; font-family: 'Italiana', sans-serif; }
+.sc-portfolio .group-nav{ display: flex; flex-direction: column; justify-content: center; align-items: center; padding-right: 35px; position: sticky; top: 0; height: 100vh; gap: 19px; font-size: 3vh; font-family: 'Italiana', sans-serif; }
 .sc-portfolio .group-nav a.on{color: #d3b203;}
 
 
